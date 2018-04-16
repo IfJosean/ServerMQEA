@@ -6,9 +6,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-var studentModel = require('./models/student');
+var studentModel = require('./model/student');
 var studentRoutes = require('./routes/student');
-var subjectModel = require('./models/subject');
+var subjectModel = require('./model/subject');
 var subjectRoutes = require('./routes/subject');
 
 var app = express();
