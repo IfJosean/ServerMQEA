@@ -31,13 +31,10 @@ router.get('/users/select/:name', student.selectOneUser);         // Devuelve el
 router.post('/users/insert', student.insertUser);                 // Inserta un nuevo usuario (username único)
 router.post('/users/update/:name', student.updateUser);           // Actualiza la información de un usuario
 router.get('/users/delete/:name', student.deleteUser);            // Elimina de la Base de Datos el usuario buscado
-
-// Funciones sobre Actividades
-router.get('/activities/select', student.selectAllActivities);    // Devuelve una lista con todas las actividades
-router.get('/activities/select/:id', student.selectOneActivity);  // Devuelve las actividad buscada
-router.post('/activities/insert', student.insertActivity);        // Inserta una nueva actividad
-router.post('/activities/update/:id', student.updateActivity);    // Actualiza la información de una actividad
-router.get('/activities/delete/:id', student.deleteActivity);     // Elimina de la Base de Datos la actividad buscada
+router.get('/users/searchName/:name', student.searchName);
+router.get('/users/searchSurname/:surname', student.searchSurname);
+router.get('/users/searchRole/:role', student.searchRole);
+router.get('/users/searchState/:state', student.searchState);
 
 
 module.exports=router;
