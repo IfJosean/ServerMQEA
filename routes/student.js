@@ -35,6 +35,7 @@ router.get('/users/searchName/:name', student.searchName);
 router.get('/users/searchSurname/:surname', student.searchSurname);
 router.get('/users/searchRole/:role', student.searchRole);
 router.get('/users/searchState/:state', student.searchState);
+router.get('/user/modifyUser/:name', student.modifyUser);
 
 
 module.exports=router;

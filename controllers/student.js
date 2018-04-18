@@ -188,6 +188,7 @@ exports.modifyUser = function(req, res) {
   Student.findOneAndUpdate({name:req.params.name}, req.body, {new: true}, function(err, student) {
     if (err)
       res.send(err);
+    console.log(student)
     res.json(student);
   });
 };
