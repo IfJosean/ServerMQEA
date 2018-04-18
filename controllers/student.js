@@ -183,3 +183,11 @@ exports.searchState = function(req, res) {
     res.json(user);
   });
 };
+
+exports.modifyUser = function(req, res) {
+  Student.findOneAndUpdate({name:req.params.name}, req.body, {new: true}, function(err, student) {
+    if (err)
+      res.send(err);
+    res.json(student);
+  });
+};

@@ -8,8 +8,6 @@ var mongoose = require('mongoose');
 
 var studentModel = require('./model/student');
 var studentRoutes = require('./routes/student');
-var subjectModel = require('./model/subject');
-var subjectRoutes = require('./routes/subject');
 
 var app = express();
 
@@ -42,7 +40,6 @@ app.all('/*', function(req, res, next) {
 
 //Routes
 app.use('/student', studentRoutes);
-app.use('/subject', subjectRoutes);
 
 //conect the database
 mongoose.connect('mongodb://localhost:27017/examen',  { useMongoClient: true });
