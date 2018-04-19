@@ -185,10 +185,17 @@ exports.searchState = function(req, res) {
 };
 
 exports.modifyUser = function(req, res) {
-  Student.findOneAndUpdate({name:req.params.name}, req.body, {new: true}, function(err, student) {
+  User.findOneAndUpdate({name:req.params.name}, req.body, {new: true}, function(err, student) {
     if (err)
       res.send(err);
-    console.log(student)
+    console.log(student);
     res.json(student);
   });
+};
+exports.deleteUserrr = function(req, res) {
+    User.findByIdAndRemove(req.body._id, function(err, student) {
+        if (err)
+            res.send(err);
+        res.json({ message: 'Product successfully deleted' });
+    });
 };

@@ -36,6 +36,8 @@ router.get('/users/searchSurname/:surname', student.searchSurname);
 router.get('/users/searchRole/:role', student.searchRole);
 router.get('/users/searchState/:state', student.searchState);
 router.get('/user/modifyUser/:name', student.modifyUser);
+router.post('/users/deleteUser', student.deleteUserrr);            // Elimina de la Base de Datos el usuario buscado
+
 
 
 module.exports=router;
