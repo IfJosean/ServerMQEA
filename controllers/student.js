@@ -193,6 +193,7 @@ exports.modifyUser = function(req, res) {
   });
 };
 exports.deleteUserrr = function(req, res) {
+  console.log(req.body);
     User.findByIdAndRemove(req.body._id, function(err, student) {
         if (err)
             res.send(err);
